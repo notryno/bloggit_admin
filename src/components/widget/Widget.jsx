@@ -5,12 +5,9 @@ import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
 
-const Widget = ({ type }) => {
+const Widget = ({ type, amount }) => {
   let data;
 
-  //temporary
-  const amount = 100;
-  const diff = 20;
 
   switch (type) {
     case "user":

@@ -37,10 +37,10 @@ const Home = () => {
       <div className="homeContainer">
         <Navbar />
         <div className="widgets">
-          <Widget type="user" />
-          <Widget type="upvotes" />
-          <Widget type="downvotes" />
-          <Widget type="comments" />
+          <Widget type="user" amount= {27} />
+          <Widget type="upvotes" amount={22}/>
+          <Widget type="downvotes" amount={23}/>
+          <Widget type="comments" amount={25}/>
         </div>
         <div className="charts">
           <Featured />
