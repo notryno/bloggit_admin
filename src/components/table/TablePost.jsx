@@ -10,7 +10,7 @@ import Paper from "@mui/material/Paper";
 const ListPost = () => {
   const rows = [
     {
-      id: 1143155,
+      id: 1,
       blogtitle: "the haunting house",
       product: "Acer Nitro 5",
       img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
@@ -23,7 +23,7 @@ const ListPost = () => {
       popularityPoints: 920,
     },
     {
-      id: 2235235,
+      id: 2,
       blogtitle: "the kidnapping game",
       img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
       author: "Michael Doe",
@@ -35,7 +35,7 @@ const ListPost = () => {
       popularityPoints: 920,
     },
     {
-      id: 2342353,
+      id: 3,
       blogtitle: "the treeclimbing",
       img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
       author: "John Smith",
@@ -47,7 +47,7 @@ const ListPost = () => {
       popularityPoints: 920,
     },
     {
-      id: 2357741,
+      id: 4,
       blogtitle: "the shooting game",
       img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
       author: "Jane Smith",
@@ -59,7 +59,7 @@ const ListPost = () => {
       popularityPoints: 920,
     },
     {
-      id: 2342355,
+      id: 5,
       blogtitle: "the anime house",
       img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
       author: "Harold Carol",
@@ -67,7 +67,7 @@ const ListPost = () => {
       time: "4pm",
       totalupvotes: 30,
       totaldownvotes: 40,
-      totalcomments: 80, 
+      totalcomments: 80,
       popularityPoints: 2000,
     },
   ];
@@ -76,11 +76,9 @@ const ListPost = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-
             <TableCell className="tableCell">#</TableCell>
             <TableCell className="tableCell">Blog Title</TableCell>
             <TableCell className="tableCell">Author</TableCell>
-
 
             <TableCell className="tableCell">Created createddate</TableCell>
             <TableCell className="tableCell">Created Time</TableCell>
@@ -88,14 +86,13 @@ const ListPost = () => {
             <TableCell className="tableCell">Total Downvotes</TableCell>
             <TableCell className="tableCell">Total Comments</TableCell>
             <TableCell className="tableCell">Popularity Points</TableCell>
-
           </TableRow>
         </TableHead>
         <TableBody>
           {rows.map((row) => (
             <TableRow key={row.id}>
               <TableCell className="tableCell">{row.id}</TableCell>
-              <TableCell className="tableCell">{row.blogtitle }</TableCell>
+              <TableCell className="tableCell">{row.blogtitle}</TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
                   <img src={row.img} alt="" className="image" />
@@ -107,7 +104,9 @@ const ListPost = () => {
               <TableCell className="tableCell">{row.totalupvotes}</TableCell>
               <TableCell className="tableCell">{row.totaldownvotes}</TableCell>
               <TableCell className="tableCell">{row.totalcomments}</TableCell>
-              <TableCell className="tableCell">{row.popularityPoints}</TableCell>
+              <TableCell className="tableCell">
+                {row.popularityPoints}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

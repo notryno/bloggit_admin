@@ -1,4 +1,3 @@
-
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
@@ -6,7 +5,7 @@ import Widget from "../../components/widget/Widget";
 import Featured from "../../components/featured/Featured";
 import Chart from "../../components/chart/Chart";
 import Table from "../../components/table/Table";
-import TablePost from '../../components/table/TablePost';
+import TablePost from "../../components/table/TablePost";
 import { useState } from "react";
 import Toggle from "react-toggle";
 import "react-toggle/style.css";
@@ -18,14 +17,11 @@ const Home = () => {
   const [isToggledBlog, setIsToggledBlog] = useState(false);
   const [showDropdownBlog, setShowDropdownBlog] = useState(false);
 
-
-
   const handleToggleChange = () => {
     setIsToggled(!isToggled);
     setShowDropdown(!showDropdown);
   };
 
-  
   const handleToggleBlogChange = () => {
     setIsToggledBlog(!isToggledBlog);
     setShowDropdownBlog(!showDropdownBlog);
@@ -37,20 +33,21 @@ const Home = () => {
       <div className="homeContainer">
         <Navbar />
         <div className="widgets">
-          <Widget type="user" amount= {27} />
-          <Widget type="upvotes" amount={22}/>
-          <Widget type="downvotes" amount={23}/>
-          <Widget type="comments" amount={25}/>
+          <Widget type="user" amount={27} />
+          <Widget type="upvotes" amount={22} />
+          <Widget type="downvotes" amount={23} />
+          <Widget type="comments" amount={25} />
         </div>
         <div className="charts">
           <Featured />
           <Chart title="Last blog post" aspect={2 / 1} />
         </div>
         <div className="dataContainer">
-
           <div className="listContainer">
-            <div className="headingContainer">
-              <div className="listTitle">Top 10 most popular bloggers</div>
+            <div className="headingContainer" style={{ padding: "20px" }}>
+              <div className="listTitle" style={{ fontSize: "20px" }}>
+                Top 10 most popular Bloggers
+              </div>
               <div className="toggle-container">
                 {showDropdown && (
                   <div className="dropdown-container">
@@ -71,15 +68,13 @@ const Home = () => {
                     </select>
                   </div>
                 )}
-                <div className="toogleTitle">
-                  All Time:
-                </div>
+                <div className="toogleTitle">All Time:</div>
                 <Toggle
                   className="toggle-button"
                   defaultChecked={!isToggled}
                   icons={{
                     checked: "",
-                    unchecked: "",  
+                    unchecked: "",
                   }}
                   onChange={handleToggleChange}
                 />
@@ -89,10 +84,11 @@ const Home = () => {
           </div>
         </div>
         <div className="dataContainer">
-
           <div className="listContainer">
-            <div className="headingContainer">
-              <div className="listTitle">Top 10 most popular post</div>
+            <div className="headingContainer" style={{ padding: "20px" }}>
+              <div className="listTitle" style={{ fontSize: "20px" }}>
+                Top 10 most popular Blogs
+              </div>
               <div className="toggle-container">
                 {showDropdownBlog && (
                   <div className="dropdown-container">
@@ -113,9 +109,7 @@ const Home = () => {
                     </select>
                   </div>
                 )}
-                <div className="toogleTitle">
-                  All Time:
-                </div>
+                <div className="toogleTitle">All Time:</div>
                 <Toggle
                   className="toggle-button"
                   defaultChecked={!isToggledBlog}
